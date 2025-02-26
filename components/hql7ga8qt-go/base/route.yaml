@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: hql7ga8qt-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: hql7ga8qt-go 
+  name: hql7ga8qt-go
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: hql7ga8qt-go
+    weight: 100 

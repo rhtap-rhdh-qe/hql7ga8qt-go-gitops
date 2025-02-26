@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hql7ga8qt-go-gitops
+  description: This is GitOps manifest for hql7ga8qt-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=hql7ga8qt-go
+    backstage.io/kubernetes-id: hql7ga8qt-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: hql7ga8qt-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:hql7ga8qt-go

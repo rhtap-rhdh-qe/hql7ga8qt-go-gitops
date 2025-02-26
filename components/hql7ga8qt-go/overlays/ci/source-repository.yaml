@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: hql7ga8qt-go-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/hql7ga8qt-go
